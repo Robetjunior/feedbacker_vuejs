@@ -76,14 +76,19 @@ import ContentLoader from '../../components/ContentLoader'
 import Icon from '../../components/Icon'
 import useStore from '../../hooks/useStore'
 import pallete from '../../../palette'
+import { reactive } from '@vue/reactivity'
 
 export default {
   components: { ContentLoader, HeaderLogged, Icon },
   setup () {
     const store = useStore()
+    const state = reactive({
+      isLoading: false
+    })
 
     return {
       store,
+      state,
       brandColors: pallete.brand
     }
   }

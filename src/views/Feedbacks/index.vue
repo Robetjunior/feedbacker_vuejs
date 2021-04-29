@@ -19,6 +19,15 @@
           <h1 class="text-3xl font-black text-brand-darkgray">
             Listagem
           </h1>
+          <suspense>
+            <template #default>
+              <filters />
+            </template>
+
+            <template #fallback>
+              loading...
+            </template>
+          </suspense>
         </div>
         <div class="px-10 pt-20 col-span-3">
 
@@ -29,10 +38,11 @@
 </template>
 
 <script>
+import Filters from './Filters'
 import HeaderLogged from '../../components/HeaderLogged'
 
 export default {
-  components: { HeaderLogged }
+  components: { HeaderLogged, Filters }
 }
 </script>
 

@@ -6,7 +6,7 @@
     <div class="flex items-center justify-between w-full mb-8">
       <badge :type="feedback.type" />
       <span class="font-regular text-brand-gray-dark">
-        {{ feedback.createdat }}
+        {{ feedback.createdAt }}
       </span>
     </div>
 
